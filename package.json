@@ -1,0 +1,40 @@
+{
+  "private": true,
+  "name": "zhinang.ai",
+  "description": "智囊 AI 桌面版",
+  "version": "1.0.0",
+  "author": "Yutou <xinyu198736@gmail.com>",
+  "main": "app/background.js",
+  "scripts": {
+    "dev": "nextron --port=8033",
+    "build": "nextron build",
+    "build:win32": "nextron build --win --ia32",
+    "build:win64": "nextron build --win --x64",
+    "build:mac": "nextron build --mac --x64",
+    "build:linux": "nextron build --linux",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "dependencies": {
+    "commander": "^9.0.0",
+
+    "eventemitter3": "^5.0.1",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "electron-installer-windows": "^3.0.0",
+    "electron-notarize": "^1.2.2",
+    "electron-serve": "^1.1.0",
+    "electron-store": "^8.1.0",
+    "prettier": "^3.0.3",
+    "postcss": "^8.4.29",
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.26",
+    "electron": "^21.3.3",
+    "electron-builder": "^23.6.0",
+    "next": "^13.4.1",
+    "nextron": "^8.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.9.4"
+  }
+}

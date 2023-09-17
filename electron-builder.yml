@@ -1,0 +1,23 @@
+appId: ai.zhinang.desktop
+productName: Zhinang.ai
+copyright: Copyright © 2023 Yutou
+directories:
+  output: dist
+  buildResources: resources
+files:
+  - from: .
+    filter:
+      - package.json
+      - app
+publish: null
+extraResources:
+  - from: public
+    to: public
+mac:
+  hardenedRuntime: true
+  gatekeeperAssess: false
+  entitlements: build/entitlements.mac.plist
+  entitlementsInherit: build/entitlements.mac.plist
+  icon: public/logo.icns
+  provisioningProfile: build/zhinangai.provisionprofile
+afterSign: ./scripts/notarize.js
